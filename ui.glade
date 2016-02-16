@@ -28,39 +28,6 @@ Author: Gabriele Musco
   <!-- interface-description Create custom .deskop launcher files -->
   <!-- interface-copyright 2015 Gabriele Musco -->
   <!-- interface-authors Gabriele Musco -->
-  <object class="GtkBox" id="box2">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="orientation">vertical</property>
-    <property name="spacing">6</property>
-    <child>
-      <object class="GtkLabel" id="label1">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="halign">start</property>
-        <property name="label" translatable="yes">label</property>
-      </object>
-      <packing>
-        <property name="expand">False</property>
-        <property name="fill">True</property>
-        <property name="position">0</property>
-      </packing>
-    </child>
-    <child>
-      <object class="GtkLevelBar" id="levelbar1">
-        <property name="height_request">20</property>
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="min_value">30</property>
-        <property name="max_value">130</property>
-      </object>
-      <packing>
-        <property name="expand">True</property>
-        <property name="fill">True</property>
-        <property name="position">1</property>
-      </packing>
-    </child>
-  </object>
   <object class="GtkApplicationWindow" id="window1">
     <property name="can_focus">False</property>
     <property name="icon_name">gnome-panel-launcher</property>
@@ -105,16 +72,9 @@ Author: Gabriele Musco
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="title">gSensorMon</property>
-        <property name="subtitle">Monitor your temperatures with style ;)</property>
         <property name="show_close_button">True</property>
         <child>
-          <object class="GtkButton" id="buttonRefresh">
-            <property name="label" translatable="yes">[DBG] Refresh</property>
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <signal name="clicked" handler="on_buttonRefresh_clicked" swapped="no"/>
-          </object>
+          <placeholder/>
         </child>
         <child>
           <placeholder/>
