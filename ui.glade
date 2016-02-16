@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.19.0 
+
+Copyright (C) 2015 Gabriele Musco
+
+This file is part of mLauncher.
+
+mLauncher is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+mLauncher is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with mLauncher.  If not, see <http://www.gnu.org/licenses/>.
+
+Author: Gabriele Musco
+
+-->
+<interface domain="en_US">
+  <requires lib="gtk+" version="3.16"/>
+  <!-- interface-license-type gplv3 -->
+  <!-- interface-name mLauncher -->
+  <!-- interface-description Create custom .deskop launcher files -->
+  <!-- interface-copyright 2015 Gabriele Musco -->
+  <!-- interface-authors Gabriele Musco -->
+  <object class="GtkBox" id="box2">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="orientation">vertical</property>
+    <property name="spacing">6</property>
+    <child>
+      <object class="GtkLabel" id="label1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="halign">start</property>
+        <property name="label" translatable="yes">label</property>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">True</property>
+        <property name="position">0</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkLevelBar" id="levelbar1">
+        <property name="height_request">20</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="min_value">30</property>
+        <property name="max_value">130</property>
+      </object>
+      <packing>
+        <property name="expand">True</property>
+        <property name="fill">True</property>
+        <property name="position">1</property>
+      </packing>
+    </child>
+  </object>
+  <object class="GtkApplicationWindow" id="window1">
+    <property name="can_focus">False</property>
+    <property name="icon_name">gnome-panel-launcher</property>
+    <property name="show_menubar">False</property>
+    <signal name="destroy" handler="onDeleteWindow" swapped="no"/>
+    <child>
+      <object class="GtkBox" id="box1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">6</property>
+        <child>
+          <object class="GtkScrolledWindow" id="scrolledwindow1">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="shadow_type">in</property>
+            <child>
+              <object class="GtkViewport" id="viewport1">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkListBox" id="listbox1">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="selection_mode">none</property>
+                    <signal name="row-activated" handler="on_listbox1_row_activated" swapped="no"/>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <child type="titlebar">
+      <object class="GtkHeaderBar" id="headerbar1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="title">gSensorMon</property>
+        <property name="subtitle">Monitor your temperatures with style ;)</property>
+        <property name="show_close_button">True</property>
+        <child>
+          <object class="GtkButton" id="buttonRefresh">
+            <property name="label" translatable="yes">[DBG] Refresh</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_buttonRefresh_clicked" swapped="no"/>
+          </object>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkAboutDialog" id="aboutdialog">
+    <property name="can_focus">False</property>
+    <property name="type">popup</property>
+    <property name="modal">True</property>
+    <property name="type_hint">dialog</property>
+    <property name="transient_for">window1</property>
+    <property name="program_name">mLauncher</property>
+    <property name="version">Early development version</property>
+    <property name="copyright" translatable="yes">Copyright © 2015 Gabriele Musco</property>
+    <property name="comments" translatable="yes">A sensors monitoring tool for GNOME</property>
+    <property name="website">https://github.com/GabMus/mLauncher</property>
+    <property name="authors">Gabriele Musco</property>
+    <property name="logo_icon_name">cpu</property>
+    <property name="license_type">gpl-3-0</property>
+    <child internal-child="vbox">
+      <object class="GtkBox" id="aboutdialog-vbox1">
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox" id="aboutdialog-action_area1">
+            <property name="can_focus">False</property>
+            <property name="layout_style">end</property>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+      </object>
+    </child>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+  </object>
+</interface>
