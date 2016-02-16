@@ -21,9 +21,6 @@ class App(Gtk.Application):
 		builder.get_object("aboutdialog").connect("delete-event", lambda *_: builder.get_object("aboutdialog").hide() or True)
 		self.connect("activate", self.activateCb)
 
-
-
-
 	def do_startup(self):
 	# start the application
 		Gtk.Application.do_startup(self)
@@ -52,6 +49,10 @@ class App(Gtk.Application):
 		manager.stop() #cleanup the sensor lib before quitting?
 		stopThread=True
 		self.quit()
+
+
+settings = Gtk.Settings.get_default()
+settings.set_property("gtk-application-prefer-dark-theme", True)
 
 
 def wait(time_lapse):
